@@ -6,7 +6,9 @@ population), and compares the results calculated with T-Function in Ref[1].
 Data from Ref[2] is also shown for comparison reasons.
 
 References:
+
 [1] Rein Taagepera,"A world population growth model: Interaction with Earth's 
     carrying capability and technology in limited space", Technological 
     Forecasting & Social Change 82 (2014) 34-41.
+
 [2] https://www.kaggle.com/theworldbank/global-population-estimates
