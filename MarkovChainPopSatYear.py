@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Mar 13 17:05:36 2019
-
 @author: Wei-Shan Lee
 email: weishan_lee@yahoo.com
 
