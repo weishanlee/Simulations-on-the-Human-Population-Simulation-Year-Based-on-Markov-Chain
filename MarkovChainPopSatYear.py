@@ -22,14 +22,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.ticker import AutoMinorLocator
 
-#%% Marcov Chain
+#%% Markov Chain
 nsteps = 2500    # time step (month)
 
 timeStep = np.arange(0, nsteps, 1)
 for i, val in enumerate(timeStep):
     timeStep[i] = 2019 + val/12.0
 
-def MarcovChain(maxN, yearlyBirthRate, yearlyDeathRate, initialPopulation):
+def MarkovChain(maxN, yearlyBirthRate, yearlyDeathRate, initialPopulation):
     N = maxN  # 1.02e10 #maximum population size
     birthRate = yearlyBirthRate  #19.349/1000. # yearly birth rate
     deathRate = yearlyDeathRate  #7.748/1000. # yearly death rate
@@ -119,7 +119,7 @@ yvalsRef2 = [3127961482,3192794384,3258201476,3324951621,3394864530,3464439525,
 
 yvalsRef2 = [yvalsRef2[i] for i in range(len(yvalsRef2)) if i%10 == 0]
 
-MC = MarcovChain(1.02e10,19.349/1000.,7.748/1000.,7.6e9)
+MC = MarkovChain(1.02e10,19.349/1000.,7.748/1000.,7.6e9)
 
 plt.plot(xvalsRef1, yvalsRef1,'ro',
          xvalsRef2, yvalsRef2,'mo',
@@ -135,7 +135,7 @@ lines=ax.get_lines()
 lines[0].set_label("Data from Table 1 in Ref[1]")
 lines[1].set_label("Data from Ref[2]")
 lines[2].set_label("T-function")
-lines[3].set_label("Marcov Chain Prediction")
+lines[3].set_label("Markov Chain Prediction")
 ax.legend(loc='center left', shadow=True, fontsize='large')
 plt.xlim(1500, 2200)
 plt.show()
